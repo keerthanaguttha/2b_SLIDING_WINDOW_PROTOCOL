@@ -12,6 +12,7 @@ To write a program to implement sliding window protocol
 ## Name    : Guttha Keerthana
 ## Reg NO. : 212223240045
 ## Client :
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -30,15 +31,16 @@ while True:
    if ack:
      print(ack)
      i+=s
-
+```
 ## Server:
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
   print(s.recv(1024).decode())
   s.send("acknowledgement received from the server".encode())
-
+```
 ## Output :
 ## Client :
 ![Screenshot 2024-09-25 091105](https://github.com/user-attachments/assets/c51ed661-7cc4-4fd6-969f-1862c11a0210)
